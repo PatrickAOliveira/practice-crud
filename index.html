@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="./assets/css/style.css" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
+      <script src="./assets/js/script.js" defer></script>
+      <title>Projeto CRUD</title>
+   </head>
+   <body>
+      <header>
+         <h1 class="header_title">Cadastro de Clientes</h1>
+      </header>
+      <main>
+         <!-- Botão para cadastrar novos clientes na tabela -->
+         <button type="button" class="button blue mobile" id="cadastrarCliente">
+            Cadastrar Clientes
+         </button>
+         <!-- Tabela de clientes -->
+         <table id="tableCliente" class="records">
+            <thead>
+               <tr>
+                  <th>Nome</th>
+                  <th>E-mail</th>
+                  <th>Celular</th>
+                  <th>Cidade</th>
+                  <th>Ação</th>
+               </tr>
+            </thead>
+            <tbody></tbody>
+         </table>
+         <div class="modal" id="modal">
+            <div class="modal_content">
+               <header class="modal_header">
+                  <h2>Novo Cliente</h2>
+                  <span class="modal_close" id="modalClose">&#10006;</span>
+               </header>
+               <!-- Modal de Formulário para preencher -->
+               <form id="form" class="modal_form">
+                  <input
+                     type="text"
+                     id="nome"
+                     data-index="new"
+                     class="modal_field"
+                     placeholder="Nome do Cliente"
+                     required />
+                  <input
+                     type="email"
+                     id="email"
+                     class="modal_field"
+                     placeholder="e-mail do Cliente"
+                     required />
+                  <input
+                     type="text"
+                     id="celular"
+                     class="modal_field"
+                     placeholder="Celular do Cliente"
+                     required />
+                  <input
+                     type="text"
+                     id="cidade"
+                     class="modal_field"
+                     placeholder="Cidade do Cliente"
+                     required />
+               </form>
+               <footer class="modal_footer">
+                  <button id="salvar" class="button green">Salvar</button>
+                  <button id="cancelar" class="button blue">Cancelar</button>
+               </footer>
+            </div>
+         </div>
+      </main>
+      <footer>Copyright &copy; Prof. Fernando Leonid</footer>
+   </body>
+</html>
